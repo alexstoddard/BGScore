@@ -7,12 +7,17 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
+	<instrumentation
+	    android:name="android.test.InstrumentationTestRunner"
+    	android:label="@string/app_name"
+	    android:targetPackage="com.urbs.bgscore" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+	    <uses-library android:name="android.test.runner" />
         <activity
             android:name="com.urbs.bgscore.MainActivity"
             android:label="@string/app_name" >
@@ -23,5 +28,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
